@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing & Communication - JàngDieurigniou</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .quiz-option {
+            cursor: pointer;
+            transition: all 0.2s;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+        }
+        .quiz-option:hover {
+            background-color: #f5f3ff;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- En-tête compact -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-14">
+                <a href="../index.html" class="text-lg font-bold text-purple-600 flex items-center">
+                    <span class="text-2xl">🎯</span>
+                    <span class="ml-2">JàngDieurigniou</span>
+                </a>
+                <a href="../formations.html" class="text-sm text-purple-600 font-medium flex items-center hover:text-purple-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Retour aux formations
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="container mx-auto px-4 py-4 max-w-4xl">
+        <!-- En-tête avec titre et métadonnées -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">Marketing & Communication Digitale</h1>
+            <div class="flex items-center mt-2 md:mt-0">
+                <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Niveau: Intermédiaire</span>
+                <span class="ml-3 text-yellow-500">★ 4.9 (203 avis)</span>
+                <span class="ml-3 text-gray-500">
+                    <span class="font-medium">Durée:</span> 8 semaines
+                </span>
+                <span class="ml-3 font-semibold text-purple-700">24 900 FCFA</span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <!-- Vidéo -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/example" 
+                        title="Stratégies de Marketing Digital" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            
+            <!-- Description rapide -->
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                <h2 class="text-xl font-semibold mb-3">À propos de cette formation</h2>
+                <p class="text-gray-700 mb-4">Maîtrisez les fondamentaux du marketing digital et de la communication en ligne pour développer efficacement votre présence numérique et atteindre vos objectifs commerciaux.</p>
+                
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <h3 class="font-medium text-purple-800 mb-2">🎯 Pourquoi cette formation ?</h3>
+                    <p class="text-sm text-gray-700">Dans un monde de plus en plus numérique, la maîtrise des outils de marketing et de communication digitale est essentielle pour toute entreprise ou professionnel souhaitant se développer.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grille d'informations -->
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+            <div>
+                <h2 class="text-xl font-semibold mb-3">Compétences acquises</h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Définir et mettre en œuvre une stratégie digitale complète</li>
+                    <li>Créer et gérer des campagnes publicitaires efficaces</li>
+                    <li>Optimiser le référencement naturel (SEO) d'un site web</li>
+                    <li>Développer une présence impactante sur les réseaux sociaux</li>
+                    <li>Analyser les données et mesurer la performance des actions</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-xl font-semibold mb-3">Contenu du programme</h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="font-medium">Semaine 1-2: Fondements du marketing digital</h3>
+                        <p class="text-sm text-gray-600">Stratégie digitale, création de personas, parcours client</p>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h3 class="font-medium">Semaine 3-4: Réseaux sociaux & contenu</h3>
+                        <p class="text-sm text-gray-600">Stratégie de contenu, community management, influenceurs</p>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h3 class="font-medium">Semaine 5-6: Publicité en ligne</h3>
+                        <p class="text-sm text-gray-600">Google Ads, Facebook Ads, campagnes display</p>
+                    </div>
+                    <div class="border-l-4 border-yellow-500 pl-4">
+                        <h3 class="font-medium">Semaine 7-8: Analyse & optimisation</h3>
+                        <p class="text-sm text-gray-600">Google Analytics, KPI, A/B testing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ressources complémentaires -->
+        <div class="mt-8 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Ressources complémentaires</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Documentation Officielle</h3>
+                            <div class="space-y-1 mt-2">
+                                <a href="https://learndigital.withgoogle.com/ateliers/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Google Ateliers Numériques</a>
+                                <a href="https://business.facebook.com/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Facebook Business</a>
+                                <a href="https://analytics.google.com/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Google Analytics</a>
+                                <a href="https://ads.google.com/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Google Ads</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex items-center">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Outils & Ressources</h3>
+                            <div class="space-y-1 mt-2">
+                                <a href="https://trends.google.com/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Google Trends</a>
+                                <a href="https://ads.google.com/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Google Keyword Planner</a>
+                                <a href="https://analytics.google.com/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Google Search Console</a>
+                                <a href="https://www.semrush.com/" target="_blank" class="text-sm text-blue-600 hover:underline block">• SEMrush (SEO & SEA)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                <h3 class="font-medium mb-2">📚 Livres recommandés</h3>
+                <ul class="space-y-1 text-sm text-gray-700">
+                    <li>• "Marketing digital" - Emmanuelle Savarit</li>
+                    <li>• "Stratégie digitale" - Marie Taillan</li>
+                    <li>• "Influence et Réseaux Sociaux" - Julien Ménielle</li>
+                    <li>• "SEO & Référencement Web" - Olivier Andrieu</li>
+                </ul>
+            </div>
+            <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                <h3 class="font-medium mb-2">🎓 Formations complémentaires</h3>
+                <ul class="space-y-1 text-sm">
+                    <li><a href="#" class="text-blue-600 hover:underline">• Création de contenu engageant</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">• Community Management avancé</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">• Analyse de données marketing</a></li>
+                    <li><a href="#" class="text-blue-600 hover:underline">• Stratégie de marque en ligne</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Public cible -->
+        <div class="bg-blue-50 p-6 rounded-lg mb-8">
+            <h2 class="text-xl font-semibold mb-3">À qui s'adresse cette formation ?</h2>
+            <p class="text-gray-700 mb-4">Cette formation est idéale pour les entrepreneurs, responsables marketing, chargés de communication, ou toute personne souhaitant développer des compétences en marketing digital. Aucun prérequis technique n'est nécessaire, mais une appétence pour le numérique est un plus.</p>
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700">Certification incluse à la fin du parcours</span>
+            </div>
+        </div>
+
+        <!-- Quiz d'évaluation -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <svg class="w-6 h-6 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Quiz d'évaluation
+            </h2>
+            
+            <p class="text-gray-600 mb-4">Testez vos connaissances avec ce court quiz. Sélectionnez la ou les bonnes réponses pour chaque question.</p>
+            
+            <div id="quiz-questions" class="space-y-6">
+                <!-- Question 1 -->
+                <div class="quiz-question p-4 border border-gray-100 rounded-lg">
+                    <p class="font-medium mb-3">1. Qu'est-ce que le taux d'engagement sur les réseaux sociaux ?</p>
+                    <div class="space-y-2 pl-2">
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="true">
+                            Le pourcentage d'interactions (likes, commentaires, partages) par rapport au nombre d'abonnés
+                        </div>
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="false">
+                            Le nombre total d'abonnés sur un compte
+                        </div>
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="false">
+                            Le budget publicitaire mensuel alloué aux réseaux sociaux
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-question p-4 border border-gray-100 rounded-lg">
+                    <p class="font-medium mb-3">2. Quel est l'objectif principal du SEO (Search Engine Optimization) ?</p>
+                    <div class="space-y-2 pl-2">
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="false">
+                            Augmenter le nombre d'abonnés sur les réseaux sociaux
+                        </div>
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="true">
+                            Améliorer la visibilité d'un site dans les résultats de recherche naturels
+                        </div>
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="false">
+                            Créer des publicités payantes sur les moteurs de recherche
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-question p-4 border border-gray-100 rounded-lg">
+                    <p class="font-medium mb-3">3. Parmi ces éléments, lequel est le plus important pour une stratégie de contenu efficace ?</p>
+                    <div class="space-y-2 pl-2">
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="false">
+                            Publier quotidiennement, peu importe la qualité
+                        </div>
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="true">
+                            Créer du contenu de qualité qui répond aux besoins de sa cible
+                        </div>
+                        <div class="quiz-option border border-gray-200 rounded p-3 hover:bg-gray-50 transition-colors" data-correct="false">
+                            Utiliser le plus de hashtags possibles
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="submit-quiz" class="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg text-base font-medium transition-colors">
+                Valider mes réponses
+            </button>
+            <div id="quiz-result" class="mt-4 p-4 text-center text-base font-medium hidden rounded-lg"></div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const options = document.querySelectorAll('.quiz-option');
+            const submitBtn = document.getElementById('submit-quiz');
+            const resultDiv = document.getElementById('quiz-result');
+            
+            // Gestion du clic sur une option
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    const question = this.closest('.quiz-question');
+                    // Réinitialiser toutes les options de cette question
+                    question.querySelectorAll('.quiz-option').forEach(opt => {
+                        opt.classList.remove('bg-purple-50', 'border-purple-300');
+                    });
+                    // Sélectionner l'option cliquée
+                    this.classList.add('bg-purple-50', 'border-purple-300');
+                });
+            });
+            
+            // Soumission du quiz
+            submitBtn.addEventListener('click', function() {
+                let score = 0;
+                const questions = document.querySelectorAll('.quiz-question');
+                let allAnswered = true;
+                
+                // Vérifier si toutes les questions ont une réponse
+                questions.forEach(question => {
+                    if (!question.querySelector('.quiz-option.bg-purple-50')) {
+                        allAnswered = false;
+                    }
+                });
+                
+                if (!allAnswered) {
+                    resultDiv.textContent = 'Veuillez répondre à toutes les questions avant de valider.';
+                    resultDiv.classList.remove('hidden', 'bg-green-50', 'text-green-700', 'bg-red-50', 'text-red-700');
+                    resultDiv.classList.add('bg-yellow-50', 'text-yellow-700');
+                    return;
+                }
+                
+                // Évaluer les réponses
+                questions.forEach(question => {
+                    const selected = question.querySelector('.quiz-option.bg-purple-50');
+                    if (selected && selected.dataset.correct === 'true') {
+                        score++;
+                        selected.classList.add('bg-green-50', 'border-green-500', 'text-green-700');
+                    } else if (selected) {
+                        selected.classList.add('bg-red-50', 'border-red-500', 'text-red-700');
+                        const correct = question.querySelector('.quiz-option[data-correct="true"]');
+                        correct.classList.add('bg-green-50', 'border-green-500', 'text-green-700');
+                    }
+                });
+                
+                // Afficher les résultats
+                const percentage = Math.round((score / questions.length) * 100);
+                resultDiv.textContent = `Score : ${score}/${questions.length} (${percentage}%)`;
+                resultDiv.classList.remove('hidden');
+                
+                if (percentage >= 70) {
+                    resultDiv.classList.add('bg-green-50', 'text-green-700');
+                    resultDiv.innerHTML += ' - <span class="font-bold">Félicitations !</span> Vous avez bien compris les bases du marketing digital.';
+                    
+                    // Ajouter un bouton pour continuer
+                    const continueBtn = document.createElement('a');
+                    continueBtn.href = '#';
+                    continueBtn.className = 'mt-3 inline-block bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors';
+                    continueBtn.textContent = 'Commencer la formation';
+                    resultDiv.appendChild(document.createElement('br'));
+                    resultDiv.appendChild(continueBtn);
+                } else {
+                    resultDiv.classList.add('bg-red-50', 'text-red-700');
+                    resultDiv.innerHTML += ' - <span class="font-bold">À améliorer.</span> N\'hésitez pas à revoir les bases avant de commencer.';
+                    
+                    // Ajouter un bouton pour réessayer
+                    const retryBtn = document.createElement('button');
+                    retryBtn.className = 'mt-3 bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 border border-gray-300 rounded-lg text-sm font-medium transition-colors';
+                    retryBtn.textContent = 'Réessayer le quiz';
+                    retryBtn.onclick = function() {
+                        window.location.reload();
+                    };
+                    resultDiv.appendChild(document.createElement('br'));
+                    resultDiv.appendChild(retryBtn);
+                }
+                
+                // Désactiver le bouton de soumission
+                submitBtn.disabled = true;
+                
+                // Faire défiler jusqu'aux résultats
+                resultDiv.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

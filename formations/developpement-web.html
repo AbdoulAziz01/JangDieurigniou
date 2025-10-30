@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développement Web - JàngDieurigniou</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .quiz-option {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .quiz-option:hover {
+            background-color: #f0f9ff;
+            border-color: #0ea5e9;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- En-tête -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="../index.html" class="text-2xl font-bold text-blue-600">JàngDieurigniou</a>
+                <a href="../formations.html" class="text-blue-600 font-medium">← Retour aux formations</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+            <h1 class="text-3xl font-bold">Développement Web Moderne</h1>
+            <div class="flex items-center mt-2 md:mt-0">
+                <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Niveau: Débutant</span>
+                <span class="ml-3 text-yellow-500">★ 4.8 (156 avis)</span>
+                <span class="ml-3 text-gray-500">
+                    <span class="font-medium">Durée:</span> 8 semaines
+                </span>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Maîtrisez les Fondamentaux du Web</h2>
+            
+            <!-- Vidéo -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Introduction au Développement Web" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            
+            <!-- Description -->
+            <div class="prose max-w-none">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Compétences acquises</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Maîtriser HTML5 et CSS3 avancé</li>
+                            <li>Créer des sites web responsifs</li>
+                            <li>Développer avec JavaScript moderne (ES6+)</li>
+                            <li>Utiliser Git pour le contrôle de version</li>
+                            <li>Déployer un site web en production</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Contenu du programme</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-medium">Semaine 1-2: HTML5 & CSS3</h4>
+                                <p class="text-sm text-gray-600">Structure sémantique, Flexbox, Grid, Animations CSS</p>
+                            </div>
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-medium">Semaine 3-4: JavaScript Fondamental</h4>
+                                <p class="text-sm text-gray-600">DOM Manipulation, Événements, Fonctions asynchrones</p>
+                            </div>
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h4 class="font-medium">Semaine 5-6: Projet Pratique</h4>
+                                <p class="text-sm text-gray-600">Création d'un site web complet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4">Ressources complémentaires</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Documentation Officielle</h4>
+                                    <div class="space-y-1">
+                                        <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank" class="text-sm text-blue-600 hover:underline block">• MDN HTML</a>
+                                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank" class="text-sm text-blue-600 hover:underline block">• MDN CSS</a>
+                                        <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank" class="text-sm text-blue-600 hover:underline block">• MDN JavaScript</a>
+                                        <a href="https://www.w3.org/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Standards W3C</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Outils & Ressources</h4>
+                                    <div class="space-y-1">
+                                        <a href="https://code.visualstudio.com/" target="_blank" class="text-sm text-blue-600 hover:underline block">• VS Code (Éditeur)</a>
+                                        <a href="https://git-scm.com/doc" target="_blank" class="text-sm text-blue-600 hover:underline block">• Documentation Git</a>
+                                        <a href="https://developer.chrome.com/docs/devtools/" target="_blank" class="text-sm text-blue-600 hover:underline block">• Chrome DevTools</a>
+                                        <a href="https://www.freecodecamp.org/" target="_blank" class="text-sm text-blue-600 hover:underline block">• freeCodeCamp (Tutoriels)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold mb-4">Ressources supplémentaires</h3>
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <h4 class="font-medium mb-2">📚 Livres recommandés</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>• "Eloquent JavaScript" - Marijn Haverbeke</li>
+                                <li>• "HTML & CSS" - Jon Duckett</li>
+                                <li>• "You Don't Know JS" - Kyle Simpson</li>
+                                <li>• "Clean Code" - Robert C. Martin</li>
+                            </ul>
+                        </div>
+                        <div class="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                            <h4 class="font-medium mb-2">🎥 Chaînes YouTube</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>• Grafikart (FR)</li>
+                                <li>• From Scratch (FR)</li>
+                                <li>• The Net Ninja (EN)</li>
+                                <li>• Web Dev Simplified (EN)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3">À qui s'adresse cette formation ?</h3>
+                    <p class="text-gray-700 mb-4">Cette formation est idéale pour les débutants complets en programmation qui souhaitent acquérir des compétences solides en développement web. Aucune expérience préalable n'est requise.</p>
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-gray-700">Certification incluse à la fin du parcours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz -->
+        <div id="quiz" class="bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-2xl font-semibold mb-6">Quiz d'évaluation</h2>
+            
+            <div id="quiz-questions" class="space-y-8">
+                <!-- Question 1 -->
+                <div class="quiz-question">
+                    <p class="font-medium mb-3">1. Que signifie HTML ?</p>
+                    <div class="space-y-3">
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="true">
+                            HyperText Markup Language
+                        </div>
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="false">
+                            Hyperlinks and Text Markup Language
+                        </div>
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="false">
+                            Home Tool Markup Language
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-question">
+                    <p class="font-medium mb-3">2. Quelle balise est utilisée pour créer un lien en HTML ?</p>
+                    <div class="space-y-3">
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="false">
+                            &lt;link&gt;
+                        </div>
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="true">
+                            &lt;a&gt;
+                        </div>
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="false">
+                            &lt;href&gt;
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-question">
+                    <p class="font-medium mb-3">3. Quelle propriété CSS est utilisée pour changer la couleur du texte ?</p>
+                    <div class="space-y-3">
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="false">
+                            text-color
+                        </div>
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="true">
+                            color
+                        </div>
+                        <div class="quiz-option p-3 border rounded-lg" data-correct="false">
+                            font-color
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <button id="submit-quiz" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                    Soumettre le quiz
+                </button>
+                <div id="quiz-result" class="mt-4 text-center font-medium hidden"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Gestion du quiz
+        document.addEventListener('DOMContentLoaded', function() {
+            const options = document.querySelectorAll('.quiz-option');
+            const submitBtn = document.getElementById('submit-quiz');
+            const resultDiv = document.getElementById('quiz-result');
+            
+            let score = 0;
+            const totalQuestions = document.querySelectorAll('.quiz-question').length;
+            
+            // Gestion de la sélection des réponses
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Désélectionner les autres options de la même question
+                    const question = this.closest('.quiz-question');
+                    question.querySelectorAll('.quiz-option').forEach(opt => {
+                        opt.classList.remove('bg-blue-100', 'border-blue-300');
+                    });
+                    
+                    // Sélectionner l'option cliquée
+                    this.classList.add('bg-blue-100', 'border-blue-300');
+                });
+            });
+            
+            // Soumission du quiz
+            submitBtn.addEventListener('click', function() {
+                let correctAnswers = 0;
+                const questions = document.querySelectorAll('.quiz-question');
+                
+                questions.forEach(question => {
+                    const selected = question.querySelector('.quiz-option.bg-blue-100');
+                    if (selected && selected.dataset.correct === 'true') {
+                        correctAnswers++;
+                        selected.classList.add('bg-green-100', 'border-green-500');
+                    } else if (selected) {
+                        selected.classList.add('bg-red-100', 'border-red-500');
+                        // Afficher la bonne réponse
+                        const correctOption = question.querySelector('.quiz-option[data-correct="true"]');
+                        correctOption.classList.add('bg-green-100', 'border-green-500');
+                    }
+                });
+                
+                // Afficher le résultat
+                resultDiv.textContent = `Votre score : ${correctAnswers}/${totalQuestions}`;
+                resultDiv.classList.remove('hidden');
+                
+                // Désactiver le bouton après soumission
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            });
+        });
+    </script>
+</body>
+</html>

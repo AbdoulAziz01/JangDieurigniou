@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - JàngDieurigniou</title>
+    <meta name="description" content="Découvrez les projets réalisés par nos apprenants">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
+        .project-card { transition: all 0.3s ease; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- En-tête -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-blue-600">JàngDieurigniou</a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium text-gray-500 hover:text-blue-600">Accueil</a>
+                    <a href="formations.html" class="font-medium text-gray-500 hover:text-blue-600">Formations</a>
+                    <a href="projets.html" class="font-medium text-blue-600">Projets</a>
+                    <a href="apropos.html" class="font-medium text-gray-500 hover:text-blue-600">À propos</a>
+                    <a href="contact.html" class="font-medium text-gray-500 hover:text-blue-600">Contact</a>
+                </nav>
+                <div class="hidden md:block">
+                    <button onclick="openLoginModal()" class="font-medium text-blue-600 hover:text-blue-700">Se connecter</button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden py-2">
+                <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Accueil</a>
+                <a href="formations.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Formations</a>
+                <a href="projets.html" class="block px-4 py-2 text-blue-600 font-medium">Projets</a>
+                <a href="apropos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">À propos</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+                <button onclick="openLoginModal()" class="w-full text-left px-4 py-2 text-blue-600 font-medium hover:bg-blue-50">Se connecter</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bannière -->
+    <div class="bg-blue-700 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Nos Projets</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Découvrez les réalisations de nos apprenants et de notre communauté</p>
+        </div>
+    </div>
+
+    <!-- Filtres -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-wrap gap-4 justify-center mb-8">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-full font-medium">Tous</button>
+            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50">Sites Web</button>
+            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50">Applications Mobiles</button>
+            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50">Design UI/UX</button>
+            <button class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50">Projets Entrepreneuriaux</button>
+        </div>
+    </div>
+
+    <!-- Grille des projets -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Projet 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden project-card">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80" 
+                         alt="Projet E-commerce" class="w-full h-48 object-cover">
+                    <span class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Site Web</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Boutique en ligne d'artisanat</h3>
+                    <p class="text-gray-600 mb-4">Plateforme e-commerce pour la vente de produits d'artisanat local sénégalais.</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="h-8 w-8 rounded-full bg-gray-200 overflow-hidden mr-2">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Auteur" class="h-full w-full object-cover">
+                            </div>
+                            <span class="text-sm text-gray-700">Aïssatou D.</span>
+                        </div>
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden project-card">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Application Mobile" class="w-full h-48 object-cover">
+                    <span class="absolute top-4 right-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">App Mobile</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Santé Mobile</h3>
+                    <p class="text-gray-600 mb-4">Application de suivi médical et de prise de rendez-vous avec des professionnels de santé.</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="h-8 w-8 rounded-full bg-gray-200 overflow-hidden mr-2">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Auteur" class="h-full w-full object-cover">
+                            </div>
+                            <span class="text-sm text-gray-700">Mamadou K.</span>
+                        </div>
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden project-card">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Design UI/UX" class="w-full h-48 object-cover">
+                    <span class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">UI/UX Design</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Redesign d'application bancaire</h3>
+                    <p class="text-gray-600 mb-4">Nouvelle expérience utilisateur pour une application bancaire mobile.</p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <div class="h-8 w-8 rounded-full bg-gray-200 overflow-hidden mr-2">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Auteur" class="h-full w-full object-cover">
+                            </div>
+                            <span class="text-sm text-gray-700">Fatou N.</span>
+                        </div>
+                        <a href="#" class="text-blue-600 text-sm font-medium hover:underline">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton Voir plus -->
+        <div class="mt-12 text-center">
+            <button class="px-6 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Charger plus de projets
+            </button>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Ce que disent nos apprenants</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Témoignage 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                            <img src="" alt="Témoin" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Aminata D.</h4>
+                            <p class="text-sm text-gray-500">Développeuse Full Stack</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Grâce à JàngDieurigniou, j'ai pu acquérir des compétences concrètes qui m'ont permis de décrocher mon premier emploi dans le développement web."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        ★★★★★
+                    </div>
+                </div>
+                
+                <!-- Témoignage 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                            <img src="" alt="Témoin" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Ibrahima S.</h4>
+                            <p class="text-sm text-gray-500">Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"La formation en entrepreneuriat m'a donné les clés pour lancer mon entreprise. Aujourd'hui, j'emploie 5 personnes dans ma start-up."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        ★★★★★
+                    </div>
+                </div>
+                
+                <!-- Témoignage 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="h-12 w-12 rounded-full bg-gray-200 overflow-hidden mr-4">
+                            <img src="" alt="Témoin" class="h-full w-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Rokhaya D.</h4>
+                            <p class="text-sm text-gray-500">Designer UI/UX</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Les projets pratiques m'ont permis de constituer un portfolio solide. J'ai été recrutée par une agence de design à Dakar."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">JàngDieurigniou</h3>
+                    <p class="text-gray-400">La plateforme qui forme les jeunes Sénégalais et Africains aux compétences numériques et entrepreneuriales.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="formations.html" class="text-gray-400 hover:text-white">Formations</a></li>
+                        <li><a href="projets.html" class="text-blue-400 font-medium">Projets</a></li>
+                        <li><a href="apropos.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Légal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mentions légales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            Dakar, Sénégal
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            contact@jangdieurigniou.sn
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            +221 70 302 15 88
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 JàngDieurigniou. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modale de connexion -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900">Connexion</h3>
+                <button onclick="closeLoginModal()" class="text-gray-400 hover:text-gray-500">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Adresse email</label>
+                    <input type="email" id="email" name="email" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                           placeholder="votre@email.com">
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
+                        <a href="#" class="text-sm text-blue-600 hover:underline">Mot de passe oublié ?</a>
+                    </div>
+                    <input type="password" id="password" name="password" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                           placeholder="••••••••">
+                </div>
+                <div class="flex items-center">
+                    <input id="remember" name="remember" type="checkbox" 
+                           class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <label for="remember" class="ml-2 block text-sm text-gray-700">
+                        Se souvenir de moi
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" 
+                            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Se connecter
+                    </button>
+                </div>
+            </form>
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-600">
+                    Pas encore de compte ? 
+                    <a href="#" class="font-medium text-blue-600 hover:text-blue-500">S'inscrire</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Gestion du formulaire de connexion
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    const remember = document.getElementById('remember').checked;
+                    
+                    // Ici, vous pouvez ajouter la logique de connexion
+                    console.log('Tentative de connexion avec:', { email, remember });
+                    
+                    // Simulation de connexion réussie
+                    setTimeout(() => {
+                        closeLoginModal();
+                        alert('Connexion réussie !');
+                    }, 500);
+                });
+            }
+            
+            // Filtrage des projets
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Mettre à jour le bouton actif
+                    filterButtons.forEach(btn => btn.classList.remove('bg-blue-600', 'text-white'));
+                    this.classList.add('bg-blue-600', 'text-white');
+                    
+                    // Filtrer les projets
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+        
+        // Fonctions pour la modale
+        function openLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Fermer la modale en cliquant à l'extérieur
+        window.onclick = function(event) {
+            const modal = document.getElementById('loginModal');
+            if (event.target === modal) {
+                closeLoginModal();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations - JàngDieurigniou</title>
+    <meta name="description" content="Découvrez nos formations pour les jeunes Sénégalais et Africains">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; }
+        .formation-card { transition: all 0.3s ease; }
+        .formation-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- En-tête -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-blue-600">JàngDieurigniou</a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium text-gray-500 hover:text-blue-600">Accueil</a>
+                    <a href="formations.html" class="font-medium text-blue-600">Formations</a>
+                    <a href="projets.html" class="font-medium text-gray-500 hover:text-blue-600">Projets</a>
+                    <a href="apropos.html" class="font-medium text-gray-500 hover:text-blue-600">À propos</a>
+                    <a href="contact.html" class="font-medium text-gray-500 hover:text-blue-600">Contact</a>
+                </nav>
+                <div class="hidden md:block">
+                    <button onclick="openLoginModal()" class="font-medium text-blue-600 hover:text-blue-700">Se connecter</button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden py-2">
+                <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Accueil</a>
+                <a href="formations.html" class="block px-4 py-2 text-blue-600 font-medium">Formations</a>
+                <a href="projets.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Projets</a>
+                <a href="apropos.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">À propos</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+                <button onclick="openLoginModal()" class="w-full text-left px-4 py-2 text-blue-600 font-medium hover:bg-blue-50">Se connecter</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bannière -->
+    <div class="bg-blue-700 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Nos Formations</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Découvrez nos programmes de formation conçus pour votre réussite professionnelle</p>
+        </div>
+    </div>
+
+    <!-- Filtres -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-wrap gap-4 justify-center mb-8" id="filters">
+            <button data-filter="all" class="px-4 py-2 bg-blue-600 text-white rounded-full font-medium filter-btn active">Toutes</button>
+            <button data-filter="developpement" class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50 filter-btn">Développement Web</button>
+            <button data-filter="marketing" class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50 filter-btn">Marketing Digital</button>
+            <button data-filter="entrepreneuriat" class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50 filter-btn">Entrepreneuriat</button>
+            <button data-filter="design" class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50 filter-btn">Design & Créa</button>
+            <button data-filter="securite" class="px-4 py-2 bg-white border border-gray-200 rounded-full hover:bg-gray-50 filter-btn">Sécurité IT</button>
+        </div>
+    </div>
+
+    <!-- Liste des formations -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Nos Formations</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Découvrez nos programmes de formation conçus pour vous donner les compétences nécessaires à votre réussite professionnelle.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="formations-container">
+            <!-- 1. Informatique & Développement numérique -->
+            <a href="formations/developpement-web.html" class="block formation-item" data-category="developpement">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Informatique & Développement" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Informatique</span>
+                        <span class="text-yellow-500 ml-2">★ 4.8</span>
+                        <span class="text-gray-500 text-sm ml-2">(156)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Informatique & Développement numérique</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Initiation à l'informatique et Internet</li>
+                        <li>• Bureautique (Word, Excel, PowerPoint)</li>
+                        <li>• Développement web avancé</li>
+                        <li>• Programmation et bases de données</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">Gratuit</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Agriculture & Élevage moderne -->
+            <a href="formations/agriculture-elevage.html" class="block formation-item" data-category="entrepreneuriat">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" 
+                     alt="Agriculture & Élevage" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Agriculture</span>
+                        <span class="text-yellow-500 ml-2">★ 4.7</span>
+                        <span class="text-gray-500 text-sm ml-2">(124)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Agriculture & Élevage moderne</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Techniques d'agriculture urbaine</li>
+                        <li>• Élevage de volaille et petits ruminants</li>
+                        <li>• Gestion d'exploitation agricole</li>
+                        <li>• Agro-entrepreneuriat</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">15 000 FCFA</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+
+            </a>
+            
+            <!-- 3. Marketing & Communication digitale -->
+            <a href="formations/marketing-communication.html" class="block formation-item" data-category="marketing">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Marketing & Communication" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Marketing</span>
+                        <span class="text-yellow-500 ml-2">★ 4.9</span>
+                        <span class="text-gray-500 text-sm ml-2">(203)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Marketing & Communication digitale</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Marketing digital et réseaux sociaux</li>
+                        <li>• Vente et relation client</li>
+                        <li>• Gestion d'image de marque</li>
+                        <li>• Création de contenu</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">24 900 FCFA</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+
+            </a>
+            
+            <!-- 4. Entrepreneuriat & Gestion d'entreprise -->
+            <a href="formations/entrepreneuriat.html" class="block formation-item" data-category="entrepreneuriat">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Entrepreneuriat" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Entrepreneuriat</span>
+                        <span class="text-yellow-500 ml-2">★ 4.9</span>
+                        <span class="text-gray-500 text-sm ml-2">(178)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Entrepreneuriat & Gestion d'entreprise</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Création de projet</li>
+                        <li>• Gestion financière simplifiée</li>
+                        <li>• Outils numériques</li>
+                        <li>• Stratégie d'entreprise</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">Gratuit</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <!-- 5. Data Science & IA -->
+            <a href="formations/data-science.html" class="block formation-item" data-category="developpement">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Data Science & IA" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Data</span>
+                        <span class="text-yellow-500 ml-2">★ 4.9</span>
+                        <span class="text-gray-500 text-sm ml-2">(87)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Data Science & IA</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Python pour la Data Science</li>
+                        <li>• Machine Learning et Deep Learning</li>
+                        <li>• Analyse et visualisation de données</li>
+                        <li>• Projets pratiques avec des données réelles</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">59 900 FCFA</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <!-- 7. Gestion de Projet Agile -->
+            <a href="formations/gestion-projet.html" class="block formation-item" data-category="entrepreneuriat">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Gestion de Projet Agile" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Gestion</span>
+                        <span class="text-yellow-500 ml-2">★ 4.7</span>
+                        <span class="text-gray-500 text-sm ml-2">(112)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Gestion de Projet Agile</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Méthodologies Agile et Scrum</li>
+                        <li>• Outils de gestion de projet (Jira, Trello)</li>
+                        <li>• Gestion des parties prenantes</li>
+                        <li>• Mise en œuvre pratique</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">34 900 FCFA</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <!-- 8. Design Graphique & UX/UI -->
+            <a href="formations/design-uxui.html" class="block formation-item" data-category="design">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" 
+                     alt="Design Graphique & UX/UI" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-2.5 py-0.5 rounded">Design</span>
+                        <span class="text-yellow-500 ml-2">★ 4.8</span>
+                        <span class="text-gray-500 text-sm ml-2">(145)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Design Graphique & UX/UI</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Adobe Photoshop et Illustrator</li>
+                        <li>• Principes de l'UX/UI Design</li>
+                        <li>• Prototypage avec Figma</li>
+                        <li>• Design d'interface utilisateur</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">39 900 FCFA</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <!-- 9. Commerce Électronique -->
+            <a href="formations/ecommerce.html" class="block formation-item" data-category="entrepreneuriat">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Commerce Électronique" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">E-commerce</span>
+                        <span class="text-yellow-500 ml-2">★ 4.6</span>
+                        <span class="text-gray-500 text-sm ml-2">(98)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Commerce Électronique</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Création de boutique en ligne</li>
+                        <li>• Stratégies de vente en ligne</li>
+                        <li>• Marketing digital pour e-commerce</li>
+                        <li>• Gestion des stocks et logistique</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">29 900 FCFA</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+
+            <!-- 10. Cybersécurité Fondamentale -->
+            <a href="formations/cybersecurite.html" class="block formation-item" data-category="securite">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden h-full">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Cybersécurité Fondamentale" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Sécurité</span>
+                        <span class="text-yellow-500 ml-2">★ 4.9</span>
+                        <span class="text-gray-500 text-sm ml-2">(134)</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Cybersécurité Fondamentale</h3>
+                    <ul class="text-gray-600 mb-4 text-sm space-y-1">
+                        <li>• Principes de base de la sécurité informatique</li>
+                        <li>• Protection contre les cyberattaques</li>
+                        <li>• Sécurisation des réseaux</li>
+                        <li>• Bonnes pratiques en entreprise</li>
+                    </ul>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-gray-900">44 900 FCFA</span>
+                        <span class="text-blue-600 font-medium">Détails →</span>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center">
+            <nav class="inline-flex rounded-md shadow">
+                <a href="#" class="px-4 py-2 rounded-l-md border border-gray-300 bg-white text-gray-700 hover:bg-gray-50">
+                    Précédent
+                </a>
+                <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-blue-600 text-white">
+                    1
+                </a>
+                <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50">
+                    2
+                </a>
+                <a href="#" class="px-4 py-2 border-t border-b border-r border-gray-300 bg-white text-gray-700 hover:bg-gray-50 rounded-r-md">
+                    Suivant
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Restez informé de nos nouvelles formations</h2>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Inscrivez-vous à notre newsletter pour recevoir les dernières mises à jour et offres spéciales.</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Votre adresse email" class="flex-grow px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-r-lg hover:bg-blue-700 transition-colors">
+                    S'inscrire
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">JàngDieurigniou</h3>
+                    <p class="text-gray-400">La plateforme qui forme les jeunes Sénégalais et Africains aux compétences numériques et entrepreneuriales.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="formations.html" class="text-blue-400 font-medium">Formations</a></li>
+                        <li><a href="projets.html" class="text-gray-400 hover:text-white">Projets</a></li>
+                        <li><a href="apropos.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Légal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mentions légales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            Dakar, Sénégal
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            contact@jangdieurigniou.sn
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            +221 70 302 15 88
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 JàngDieurigniou. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modale de connexion -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900">Connexion</h3>
+                <button onclick="closeLoginModal()" class="text-gray-400 hover:text-gray-500">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Adresse email</label>
+                    <input type="email" id="email" name="email" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                           placeholder="votre@email.com">
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <label for="password" class="block text-sm font-medium text-gray-700">Mot de passe</label>
+                        <a href="#" class="text-sm text-blue-600 hover:underline">Mot de passe oublié ?</a>
+                    </div>
+                    <input type="password" id="password" name="password" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                           placeholder="••••••••">
+                </div>
+                <div class="flex items-center">
+                    <input id="remember" name="remember" type="checkbox" 
+                           class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <label for="remember" class="ml-2 block text-sm text-gray-700">
+                        Se souvenir de moi
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" 
+                            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Se connecter
+                    </button>
+                </div>
+            </form>
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-600">
+                    Pas encore de compte ? 
+                    <a href="#" class="font-medium text-blue-600 hover:text-blue-500">S'inscrire</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Gestion du formulaire de connexion
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    const remember = document.getElementById('remember').checked;
+                    
+                    // Ici, vous pouvez ajouter la logique de connexion
+                    console.log('Tentative de connexion avec:', { email, remember });
+                    
+                    // Simulation de connexion réussie
+                    setTimeout(() => {
+                        closeLoginModal();
+                        alert('Connexion réussie !');
+                    }, 500);
+                });
+            }
+        });
+        
+        // Fonctions pour la modale
+        function openLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Fermer la modale en cliquant à l'extérieur
+        window.onclick = function(event) {
+            const modal = document.getElementById('loginModal');
+            if (event.target === modal) {
+                closeLoginModal();
+            }
+        }
+    </script>
+    
+    <script>
+        // Filtrage des formations
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const formationItems = document.querySelectorAll('.formation-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Mettre à jour les boutons actifs
+                    filterButtons.forEach(btn => btn.classList.remove('bg-blue-600', 'text-white'));
+                    this.classList.add('bg-blue-600', 'text-white');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filtrer les formations
+                    formationItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
